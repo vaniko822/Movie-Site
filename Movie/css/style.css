@@ -1,0 +1,935 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'BPG Nino Mtavruli Bold';
+    src: url("../fonts/bpg_nino_mtavruli_bold.ttf");
+}
+
+@font-face {
+    font-family: 'BPG Nino Mtavruli';
+    src: url("../fonts/bpg_nino_mtavruli_normal.ttf");
+}
+
+@font-face {
+    font-family: 'BPG Arial';
+    src: url("../fonts/bpg_arial_2009.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'BPG Arial';
+    font-size: 14px;
+    background-color: #303134;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#scrolledNav {
+    background-color: #000;
+    z-index: 99999;
+}
+
+#seriesh3index {
+    font-size: 20px;
+    margin-top: 140px; 
+    margin-left: 10px; 
+    margin-bottom: -60px;
+}
+
+#actorsh3index2 {
+    font-size: 20px;
+    margin-top: 100px; 
+    margin-left: 10px; 
+}
+
+/* Menu (Navbar) */
+nav {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+}
+
+.navbar {
+    transition: all 0.2s;
+    z-index: 9999;
+}
+
+.navbar-container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.menu-item > a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+
+.menu-item > a:hover {
+    color: red;
+    transition: .3s;
+}
+
+.navbar-logo {
+    height: 40px;
+}
+
+.login-img {
+    height: 25px;
+}
+
+.language-img {
+    height: 25px;
+    margin-left: 7px;
+}
+
+.login-language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#switch {
+    margin-left: 15px;
+}
+
+/* Slider */
+
+.carousel {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.carousel-items,
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carousel-item {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    transition: 0.2s;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    background-color: transparent;
+    border: 0;
+    z-index: 999;
+    cursor:pointer;
+    height: 100%;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.arrow:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.arrow-left {
+    left: 0;
+    padding-left: 150px;
+}
+
+.arrow-right {
+    right: 0;
+    padding-right: 150px;
+}
+
+.carousel-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    text-align: center;
+}
+
+.carousel-item h1 {
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.carousel-item p {
+    color: #fff;
+}
+
+.indicators {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+    z-index: 9999;
+}
+
+.indicator {
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    display: inline-block;
+    margin-right: 5px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.indicator.active {
+    opacity: 1;
+}
+
+/* Top artists */
+
+.best-artists {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.artist-item {
+    width: 18.5%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 12px;
+    position: relative;
+}
+
+.description-artist {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    padding: 20px 0;
+    bottom: 0;
+}
+
+.description-artist h3 {
+    margin-bottom: 5px;
+}
+
+/* Login */
+.container-login {
+    width: 80%;
+    margin: auto;
+    height: 650px;
+}
+
+.login {
+    padding: 150px 0px;
+    width: 45%;
+    height: 100px;
+    margin: auto;
+    color: black;
+    margin-bottom: 300px;
+}
+
+.login-container {
+    position: relative;
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 30px;
+}
+
+.login-input {
+    width: 80%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+.login-input:hover {
+    border-bottom: 2px solid red;
+    background-color: white;
+    box-shadow: 0 0 5px;
+    transition: .3s;
+}
+
+.login-name {
+    border: none;
+    border-bottom: 2px solid #bcbcbc;
+    padding-left: 15px;
+}
+
+.login-password {
+    border: none;
+    border-bottom: 2px solid #bcbcbc;
+    padding-left: 15px;
+}
+
+.forget-password {
+    position: absolute;
+    left: 40px;
+    font-size: 12px;
+}
+
+.forget-password > a {
+    text-decoration: none;
+    color: #969696;
+}
+
+.submit-button {
+    width: 80%;
+    height: 50px;
+    margin-top: 40px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    color: red;
+    background-color: white;
+    box-shadow: 0 0 5px;
+    transition: .3s;
+}
+
+.register-button {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.register-button > a {
+    text-decoration: none;
+    color: red;
+}
+
+.register-button > a:hover {
+    color: #000;
+    transition: .3s;
+}
+
+/* Contact */
+
+.contact {
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    padding: 100px 0;
+    display: flex;
+    margin-bottom: 250px;
+}
+
+.map {
+    width: 100%;
+    box-shadow: 0 0 30px #000;
+    box-sizing: content-box;
+}
+
+.social-icon {
+    height: 30px;
+}
+
+.social-networks {
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    border: 1px solid #fff;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-shadow: 0 0 30px #000;
+    background-color: #fff;
+    box-sizing: content-box;
+}
+
+.social-networks-item > a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.social-networks-item > a:hover {
+    color: red;
+    transition: .3s;
+}
+
+.contact-form {
+    width: 100%;
+    /* margin-top: 30px; */
+    margin: auto;
+    color: black;
+}
+
+.contact-container {
+    position: relative;
+    height: 350px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-input {
+    width: 80%;
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.submit-contact-button {
+    width: 80%;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-contact-button:hover {
+    color: red;
+    background-color: white;
+    box-shadow: 0 0 5px;
+    transition: .3s;
+}
+
+.text-contact-input {
+    height: 70px;
+}
+
+.container-contact {
+    width: 80%;
+    margin: auto;
+    height: 650px;
+}
+
+/* Register form */
+.container-register {
+    width: 80%;
+    margin: auto;
+    height: 650px;
+}
+
+.register {
+    padding: 100px 0px;
+    width: 60%;
+    height: 100px;
+    margin: auto;
+    color: black;
+    margin-bottom: 500px;
+}
+
+.register-container {
+    position: relative;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 30px;
+}
+
+.register-input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+.register-input:hover {
+    border-bottom: 2px solid red;
+    background-color: white;
+    box-shadow: 0 0 5px;
+    transition: .3s;
+}
+
+.register-input-password:hover {
+    border-bottom: 2px solid red;
+    background-color: white;
+    box-shadow: 0 0 5px;
+    transition: .3s;
+}
+
+.register-form {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-input-password {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+.select-form {
+    width: 45%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+.form-select-country {
+    border: none;
+    border-bottom: 2px solid #bcbcbc;
+    padding-left: 15px;
+}
+
+.form-select-city {
+    border: none;
+    border-bottom: 2px solid #bcbcbc;
+    padding-left: 15px;
+}
+
+.select-form:hover {
+    border-bottom: 2px solid red;
+    background-color: white;
+    box-shadow: 0 0 5px;
+    transition: .3s;
+}
+
+.datetime-register {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-bottom: 2px solid #bcbcbc;
+}
+
+.submit-register-button {
+    width: 80%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-register-button:hover {
+    color: red;
+    background-color: white;
+    box-shadow: 0 0 5px;
+    transition: .3s;
+}
+
+#registerbutton {
+    text-decoration: none;
+    color: red;
+}
+
+#registerbutton:hover {
+    color: black;
+    transition: .3s;
+}
+
+#correctpassword {
+    color: red;
+    font-size: 11px;
+    margin-top: 0px;
+}
+
+/* Movies */
+.movies {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.movies-item {
+    width: 24%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 12px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.rates {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.year {
+    width: 25%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.imdb-img {
+    display: flex;
+    align-items: center;
+}
+
+.movies-item-title {
+    margin-top: 350px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer-text {
+    margin-top: -25px;
+    color: white;
+    text-align: center;
+    font-family: 'Concert One';
+}
+
+/* Actors Page */
+.best-artists-page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.artist-item {
+    margin-top: 20px;
+}
+
+/* Gamocnobana */
+.gamocnobana {
+    margin: auto;
+    margin: 10px;
+    margin-top: 310px;
+}
+
+.brad-pitgamocnobana {
+    width: 25%;
+}
+
+.gamocnobana-input {
+    border: none;
+    border-bottom: 2px solid #808080;
+    border-radius: 5px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+.gamocnobana-input:hover {
+    border-bottom: 2px solid red;
+    transition: .3s;
+}
+
+#gamocnobabutton {
+    width: 80%;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    height: 25px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#gamocnobabutton:hover {
+    box-shadow: 0 0 5px black;
+    color: red;
+}
+
+#gamocnobabutton1 {
+    width: 80%;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    height: 25px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#gamocnobabutton1:hover {
+    box-shadow: 0 0 5px black;
+    color: red;
+}
+
+#gamocnobabutton2 {
+    width: 80%;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    height: 25px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#gamocnobabutton2:hover {
+    box-shadow: 0 0 5px black;
+    color: red;
+}
+
+#gamocnobabutton3 {
+    width: 80%;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    height: 25px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#gamocnobabutton3:hover {
+    box-shadow: 0 0 5px black;
+    color: red;
+}
+
+#gamocnobabutton4 {
+    width: 80%;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    height: 25px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#gamocnobabutton4:hover {
+    box-shadow: 0 0 5px black;
+    color: red;
+}
+
+#gamocnobabutton5 {
+    width: 80%;
+    margin-left: 50%;
+    transform:translateX(-50%);
+    height: 25px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#gamocnobabutton5:hover {
+    box-shadow: 0 0 5px black;
+    color: red;
+}
+
+.artist-item-gamocnobana {
+    width: 18.5%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* Responsive */
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    .best-artists {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .artist-item {
+        width: 45%;
+    }
+
+    .movies {
+        flex-wrap: wrap;
+    }
+
+    .movies-item {
+        width: 48%;
+        height: 350px;
+    }
+
+    .movies-item-title {
+        margin-top: 360px;
+    }
+
+    .contact {
+        width: 100%;
+        padding: 150px 0;
+    }
+
+    .contact-form {
+        height: 250px;
+    }
+
+    .text-contact-input {
+        height: 40px;
+    }
+
+    .best-artists-page {
+        justify-content: space-around;
+    }
+
+    .login {
+        width: 70%;
+        height: 400px;
+    }
+
+    .register {
+        width: 85%;
+    }
+
+    .map {
+        height: 300px;
+        box-sizing: content-box;
+    }
+
+    .social-networks {
+        width: 50%;
+        height: 300px;
+        box-sizing:content-box;
+    }
+
+    .social-icon {
+        height: 25px;
+    }
+
+    .artist-item-gamocnobana {
+        width: 45%;
+        justify-content: space-around;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    #actorsh3index2 {
+        margin-bottom: -100px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .best-artists {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .artist-item {
+        width: 45%;
+    }
+
+    .movies {
+        flex-wrap: wrap;
+    }
+    .movies-item {
+        width: 45%;
+        margin-left: 10px;
+        height: 300px;
+    }
+    .movies-item-title {
+        margin-top: 300px;
+    }
+
+    #seriesh3index {
+        margin-bottom: -60px;
+        margin-top: 90px;
+    }
+
+    .best-artists-page {
+        justify-content: space-around;
+    }
+
+    .contact {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container-contact {
+        height: 800px;
+    }
+
+    .social-networks {
+        width: 100%;
+        height: 400px;
+    }
+
+    .map-location {
+        width: 100%;
+        height: 200px;
+    }
+
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+
+    .login {
+        width: 90%;
+    }
+
+    .login-container {
+        width: 100%;
+    }
+
+    .register {
+        width: 100%;
+    }
+
+    .container-register {
+        width: 100%;
+    }
+
+    .artist-item-gamocnobana {
+        width: 45%;
+        justify-content: space-around;
+        margin-top: 100px;
+    }
+
+    #actorsh3index2 {
+        margin-bottom: -100px;
+    }
+}

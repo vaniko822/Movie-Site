@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie - ავტორიზაცია</title>
+    <link rel="shortcut icon" href="img/logo-movie.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Concert+One&family=Orbitron:wght@600&family=Roboto+Condensed:ital,wght@1,700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="navbar-logo" src="img/movie-logo.png" alt="not found">
+                </a>
+            </div>
+
+            <div class="menu">
+                <ul class="menu-ul">
+                    <li class="menu-item">
+                        <a id="home" href="index.html">მთავარი</a>
+                    </li>
+                    <li class="menu-item">
+                        <a id="films" href="films.html">ფილმები</a>
+                    </li>
+                    <li class="menu-item">
+                        <a id="series" href="series.html">სერიალები</a>
+                    </li>
+                    <li class="menu-item">
+                        <a id="actors" href="actors.html">მსახიობები</a>
+                    </li>
+                    <li class="menu-item">
+                        <a id="contact" href="contact.html">კონტაქტი</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="login-language">
+                <a href="login.html"><img class="login-img" src="img/login.png" alt="not found"></a>
+                <input id="switch" type="checkbox" value="switch">
+                <label>ენის შეცვლა</label>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-login">
+        <form class="login">
+            <div class="login-container">
+                <h3 id="logintext" style="margin: 20px;">ავტორიზაცია</h3>
+                <hr style="margin: 20px;">
+                <div class="email-login">
+                    <input id="inputemail" class="login-name login-input" type="text" placeholder="შეიყვანეთ ელ.ფოსტა" required>
+                </div>
+
+                <div class="password-login">
+                    <input id="inputpassword" class="login-password login-input" type="password" placeholder="შეიყვანეთ პაროლი" required>
+                </div>
+
+                <div class="forget-password">
+                    <a id="forgetpassword" href="">
+                        დაგავიწყდა პაროლი?
+                    </a>
+                </div>
+
+                <button id="loginbuttontext" type="submit" class="submit-button">შესვლა</button>
+                
+                <div id="noregister" class="register-button">
+                    ჯერ კიდევ არ ხარ რეგისტრირებული?<br>
+                </div>
+                <a id="registerbutton" href="register.html">
+                    <span>რეგისტრაცია</span>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="container-footer">
+            <img class="logo-footer" src="img/logo-footer.png" width="100px">
+            <div class="footer-text">
+                <h3>Created By</h3>
+                <h1>VK</h1>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/language-login.js"></script>
+</body>
+</html>

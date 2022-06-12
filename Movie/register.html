@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie - რეგისტრაცია</title>
+    <link rel="shortcut icon" href="img/logo-movie.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Concert+One&family=Orbitron:wght@600&family=Roboto+Condensed:ital,wght@1,700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="navbar-logo" src="img/movie-logo.png" alt="not found">
+                </a>
+            </div>
+
+            <div class="menu">
+                <ul class="menu-ul">
+                    <li class="menu-item">
+                        <a id="home" href="index.html">მთავარი</a>
+                    </li>
+                    <li class="menu-item">
+                        <a id="films" href="films.html">ფილმები</a>
+                    </li>
+                    <li class="menu-item">
+                        <a id="series" href="series.html">სერიალები</a>
+                    </li>
+                    <li class="menu-item">
+                        <a id="actors" href="actors.html">მსახიობები</a>
+                    </li>
+                    <li class="menu-item">
+                        <a id="contact" href="contact.html">კონტაქტი</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="login-language">
+                <a href="login.html"><img class="login-img" src="img/login.png" alt="not found"></a>
+                <input id="switch" type="checkbox" value="switch">
+                <label>ენის შეცვლა</label>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-register">
+        <form class="register">
+            <div class="register-container">
+                <h3 id="registertextp" style="margin: 20px;">რეგისტრაცია</h3>
+                <hr style="margin: 20px;">
+
+                <div class="register-form">
+                    <div class="flex">
+                        <div class="email-register">
+                            <input id="inputemailr" class="login-name register-input" type="text" placeholder="შეიყვანეთ ელ.ფოსტა" required>
+                        </div>
+        
+                        <div class="username-register">
+                            <input id="inputusernamer" class="login-name register-input" type="text" placeholder="შეიყვანეთ მომხმარებლის სახელი" required>
+                        </div>
+                    </div>
+    
+                    <div class="password-register">
+                        <input id="inputpasswordr" class="login-password register-input-password" type="password" placeholder="შეიყვანეთ პაროლი" required>
+                    </div>
+
+                    <div id="checkpassword"></div>
+
+                    <div class="repassword-register">
+                        <input id="inputrepasswordr" class="login-password register-input-password" type="password" placeholder="დაადასტურეთ პაროლი" required>
+                    </div>
+
+                    <div id="correctpassword"></div>
+
+                    <div class="flex">
+                        <select class="form-select-country select-form" id="select-country" required>
+                            <option id="countrytext" selected>ქვეყანა</option>
+                            <option id="countrygreece" value="1">საბერძნეთი</option>
+                            <option id="countryspain" value="2">ესპანეთი</option>
+                            <option id="countryjapan" value="3">იაპონია</option>
+                            <option id="countryturkey" value="4">თურქეთი</option>
+                            <option id="countryargentina" value="5">არგენტინა</option>
+                            <option id="countrygeorgia" value="6">საქართველო</option>
+                            <option id="countryukraine" value="7">უკრაინა</option>
+                            <option id="countrybulgaria" value="8">ბულგარეთი</option>
+                            <option id="countryfrance" value="9">საფრანგეთი</option>
+                            <option id="countrygermany" value="10">გერმანია</option>
+
+                        </select>
+
+                        <select class="form-select-city select-form" id="select-city" required>
+                            <option id="citytext" selected>ქალაქი</option>
+                            <option id="citytbilisi" value="1">თბილისი</option>
+                            <option id="cityparis" value="2">პარიზი</option>
+                            <option id="cityberlin" value="3">ბერლინი</option>
+                            <option id="citylondon" value="4">ლონდონი</option>
+                            <option id="citybuenosaires" value="5">ბუენოს-აირესი</option>
+                            <option id="citykiev" value="6">კიევი</option>
+                            <option id="citypekin" value="7">პეკინი</option>
+                            <option id="citymadrid" value="8">მადრიდი</option>
+                            <option id="cityateni" value="9">ათენი</option>
+                            <option id="cityankara" value="10">ანკარა</option>
+                        </select>
+                    </div>
+
+                    <div class="number-register">
+                        <input id="numberr" type="tel" class="login-name register-input-password" id="phone-number" name="phone" placeholder="მობილურის ნომერი" required>
+                    </div>
+
+                    <div class="date-register">
+                        <input class="datetime-register" type="date">
+                    </div>
+    
+                    <button onclick="passwordvalidate(),passwordchecker(),emailchecker()" id="registersubmit" type="submit" class="submit-register-button" value="today">ექაუნთის შექმნა</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <div class="container-footer">
+            <img class="logo-footer" src="img/logo-footer.png" width="100px">
+            <div class="footer-text">
+                <h3>Created By</h3>
+                <h1>VK</h1>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/language-register.js"></script>
+</body>
+</html>

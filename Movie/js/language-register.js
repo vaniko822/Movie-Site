@@ -1,0 +1,116 @@
+let switcher = document.querySelector('#switch');
+let checked = JSON.parse(localStorage.getItem("checkbox"));
+document.getElementById("switch").checked = checked;
+
+switcher.addEventListener('click', function(){
+    localStorage.setItem("checkbox", switcher.checked);
+
+    if(switcher.checked){
+        home.innerText = 'Home';
+        films.innerText = 'Movies';
+        actors.innerText = 'Actors';
+        contact.innerText = 'Contact';
+        series.innerText = 'Series';
+        registertextp.innerText = 'Register';
+        registersubmit.innerText = 'Register';
+        citytext.innerText = 'City';
+        citytbilisi.innerText = 'Tbilisi';
+        cityparis.innerText = 'Paris';
+        cityberlin.innerText = 'Berlin';
+        citylondon.innerText = 'London';
+        citybuenosaires.innerText = 'Buenos-aires';
+        citykiev.innerText = 'Kiev';
+        citypekin.innerText = 'Pekin';
+        citymadrid.innerText = 'Madrid';
+        cityateni.innerText = 'Athens';
+        cityankara.innerText = 'Ankara';
+        countrytext.innerText = 'Country';
+        countrygreece.innerText = 'Greece';
+        countryspain.innerText = 'Spain';
+        countryjapan.innerText = 'Japan';
+        countryturkey.innerText = 'Turkey';
+        countryargentina.innerText = 'Argentina';
+        countrygeorgia.innerText = 'Georgia';
+        countryukraine.innerText = 'Ukraine';
+        countrybulgaria.innerText = 'Bulgaria';
+        countryfrance.innerText = 'France';
+        countrygermany.innerText = 'Germany';
+        inputemailr.placeholder = 'Enter an email';
+        inputusernamer.placeholder = 'Enter an username';
+        inputpasswordr.placeholder = 'Enter a password';
+        inputrepasswordr.placeholder = 'Repeat password';
+        numberr.placeholder = 'Enter the mobile number';
+    } else {
+        home.innerText = 'მთავარი';
+        films.innerText = 'ფილმები';
+        actors.innerText = 'მსახიობები';
+        contact.innerText = 'კონტაქტი';
+        series.innerText = 'სერიალები';
+        registertextp.innerText = 'რეგისტრაცია';
+        registersubmit.innerText = 'რეგისტრაცია';
+        citytext.innerText = 'ქალაქი';
+        citytbilisi.innerText = 'თბილისი';
+        cityparis.innerText = 'პარიზი';
+        cityberlin.innerText = 'ბერლინი';
+        citylondon.innerText = 'ლონდონი';
+        citybuenosaires.innerText = 'ბუენოს-აირესი';
+        citykiev.innerText = 'კეივი';
+        citypekin.innerText = 'პეკინი';
+        citymadrid.innerText = 'მადრიდი';
+        cityateni.innerText = 'ათენი';
+        cityankara.innerText = 'ანკარა';
+        countrytext.innerText = 'ქვეყანა';
+        countrygreece.innerText = 'საბერძნეთი';
+        countryspain.innerText = 'ესპანეთი';
+        countryjapan.innerText = 'იაპონია';
+        countryturkey.innerText = 'თურქეთი';
+        countryargentina.innerText = 'არგენტინა';
+        countrygeorgia.innerText = 'საქართველო';
+        countryukraine.innerText = 'უკრაინა';
+        countrybulgaria.innerText = 'ბულგარეთი';
+        countryfrance.innerText = 'საფრანგეთი';
+        countrygermany.innerText = 'გერმანია';
+        inputemailr.placeholder = 'შეიყვანეთ ელ.ფოსტა';
+        inputusernamer.placeholder = 'შეიყვანეთ მომხმარებლის სახელი';
+        inputpasswordr.placeholder = 'შეიყვანეთ პაროლი';
+        inputrepasswordr.placeholder = 'გაიმეორეთ პაროლი';
+        numberr.placeholder = 'შეიყვანეთ მობილურის ნომერი';
+    }
+})
+
+if(checked == true){
+    home.innerText = 'Home';
+    films.innerText = 'Movies';
+    actors.innerText = 'Actors';
+    contact.innerText = 'Contact';
+    series.innerText = 'Series';
+    registertextp.innerText = 'Register';
+    registersubmit.innerText = 'Register';
+    citytext.innerText = 'City';
+    citytbilisi.innerText = 'Tbilisi';
+    cityparis.innerText = 'Paris';
+    cityberlin.innerText = 'Berlin';
+    citylondon.innerText = 'London';
+    citybuenosaires.innerText = 'Buenos-aires';
+    citykiev.innerText = 'Kiev';
+    citypekin.innerText = 'Pekin';
+    citymadrid.innerText = 'Madrid';
+    cityateni.innerText = 'Athens';
+    cityankara.innerText = 'Ankara';
+    countrytext.innerText = 'Country';
+    countrygreece.innerText = 'Greece';
+    countryspain.innerText = 'Spain';
+    countryjapan.innerText = 'Japan';
+    countryturkey.innerText = 'Turkey';
+    countryargentina.innerText = 'Argentina';
+    countrygeorgia.innerText = 'Georgia';
+    countryukraine.innerText = 'Ukraine';
+    countrybulgaria.innerText = 'Bulgaria';
+    countryfrance.innerText = 'France';
+    countrygermany.innerText = 'Germany';
+    inputemailr.placeholder = 'Enter an email';
+    inputusernamer.placeholder = 'Enter an username';
+    inputpasswordr.placeholder = 'Enter a password';
+    inputrepasswordr.placeholder = 'Repeat password';
+    numberr.placeholder = 'Enter the mobile number';
+}
